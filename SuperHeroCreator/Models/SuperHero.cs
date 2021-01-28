@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SuperHeroCreator.Models
 {
-    public class SuperHeroAttributes
+    public class SuperHeros
     {
         [Key]
         public int Id { get; set; }
@@ -15,6 +15,7 @@ namespace SuperHeroCreator.Models
         public string PrimaryAbility { get; set; }
         public string SecondaryAbility { get; set; }
         public string CatchPhrase { get; set; }
+        public string HeroImage { get; set; }
 
     }
 }

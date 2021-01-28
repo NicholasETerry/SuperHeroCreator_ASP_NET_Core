@@ -4,11 +4,18 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using SuperHeroCreator.Data;
+using SuperHeroCreator.Models;
 
 namespace SuperHeroCreator.Controllers
 {
     public class SuperHero : Controller
     {
+        private ApplicationDbContext _context;
+        public SuperHero(ApplicationDbContext context)
+        {
+            _context = context;
+        }
         // GET: SuperHero
         public ActionResult Index()
         {
@@ -30,10 +37,11 @@ namespace SuperHeroCreator.Controllers
         // POST: SuperHero/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(SuperHeros newHero) // pass a superhero object to create new hero
         {
             try
             {
+                _context.SuperHero.Add(newHero);
                 return RedirectToAction(nameof(Index));
             }
             catch

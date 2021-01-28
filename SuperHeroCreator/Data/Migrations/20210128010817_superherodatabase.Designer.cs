@@ -10,8 +10,8 @@ using SuperHeroCreator.Data;
 namespace SuperHeroCreator.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210127193609_NewSuperHeroDataBase")]
-    partial class NewSuperHeroDataBase
+    [Migration("20210128010817_superherodatabase")]
+    partial class superherodatabase
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -221,7 +221,7 @@ namespace SuperHeroCreator.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("SuperHeroCreator.Models.SuperHeroAttributes", b =>
+            modelBuilder.Entity("SuperHeroCreator.Models.SuperHero", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -232,6 +232,9 @@ namespace SuperHeroCreator.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CatchPhrase")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("HeroImage")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
@@ -245,7 +248,7 @@ namespace SuperHeroCreator.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("SuperHero");
+                    b.ToTable("SuperHeros");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
