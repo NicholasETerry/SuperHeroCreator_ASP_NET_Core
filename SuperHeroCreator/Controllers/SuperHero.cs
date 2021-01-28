@@ -17,7 +17,7 @@ namespace SuperHeroCreator.Controllers
             _context = context;
         }
         // GET: SuperHero
-        public ActionResult Index()
+        public ActionResult Index() // homepage for application.
         {
             return View();
         }
@@ -36,12 +36,12 @@ namespace SuperHeroCreator.Controllers
 
         // POST: SuperHero/Create
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public ActionResult Create(SuperHeros newHero) // pass a superhero object to create new hero
         {
             try
             {
                 _context.SuperHero.Add(newHero);
+                _context.SaveChanges();
                 return RedirectToAction(nameof(Index));
             }
             catch

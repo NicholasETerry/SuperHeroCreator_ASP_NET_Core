@@ -166,3 +166,4 @@ C:\Users\Nicholas\Desktop\DevCode\Thulium\SuperHeroCreator\SuperHeroCreator\bin\
 C:\Users\Nicholas\Desktop\DevCode\Thulium\SuperHeroCreator\SuperHeroCreator\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Nicholas\Desktop\DevCode\Thulium\SuperHeroCreator\SuperHeroCreator\obj\Debug\netcoreapp3.1\Razor\Views\Superhero\Create.cshtml.g.cs
 C:\Users\Nicholas\Desktop\DevCode\Thulium\SuperHeroCreator\SuperHeroCreator\obj\Debug\netcoreapp3.1\Razor\Views\Superhero\Edit.cshtml.g.cs
+C:\Users\Nicholas\Desktop\DevCode\Thulium\SuperHeroCreator\SuperHeroCreator\obj\Debug\netcoreapp3.1\Razor\Views\Superhero\Delete.cshtml.g.cs
